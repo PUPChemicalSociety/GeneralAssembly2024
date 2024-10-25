@@ -79,7 +79,7 @@ label {
 
 input, select {
     width: 100%;
-    height: clamp(30px, 5vw, 50px);
+    height: clamp(30px, 2vw, 50px);
     padding: 1.5vw;
     border: 1px solid #000;
     border-radius: 5px;
