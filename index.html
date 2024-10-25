@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PUP Chemical Society Ticket Generator</title>
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Link to the CSS file -->
+    <link href="https://fonts.cdnfonts.com/css/megrath" rel="stylesheet">
+               
+</head>
+<body>
+
+    <div id="ticket-container" role="application">
+        <div id="page1">
+            <div id="titleBox" aria-live="polite">
+                <h1>PUP Chemical Society Ticket Generator</h1>
+            </div>
+
+            <form id="infoForm" aria-labelledby="titleBox">
+                <label for="name" style="color: #000000">Name:</label>
+                <input type="text" id="name" aria-required="true" placeholder="e.g., Juan Cruz" required>
+                <div id="nameError" class="error-message"></div>
+
+                <label for="section" style="color: #000000">Year and Section:</label>
+                <select id="section" aria-required="true" required>
+                    <option value="" disabled selected>Select Year and Section</option>
+                    <option value="1-1">1-1</option>
+                    <option value="1-2">1-2</option>
+                    <option value="2-1">2-1</option>
+                    <option value="2-2">2-2</option>
+                    <option value="3-1">3-1</option>
+                    <option value="3-2">3-2</option>
+                    <option value="4-1">4-1</option>
+                    <option value="4-2">4-2</option>
+                </select>
+                <div id="sectionError" class="error-message"></div>
+
+                <label for="session" style="color: #000000">Session:</label>
+                <select id="session" aria-required="true" required>
+                    <option value="" disabled selected>Select Session</option>
+                    <option value="Morning Session">Morning Session</option>
+                    <option value="Afternoon Session">Afternoon Session</option>
+                </select>
+                <div id="sessionError" class="error-message"></div>
+
+                <button type="button" onclick="generateTicket()">Generate Ticket</button>
+            </form>
+        </div>
+
+        <!-- Second Page -->
+        <div id="page2" style="display: none;">
+            <!-- Ticket Header -->
+            <div id="ticketHeader">
+                <h1 id="sessionTitle">Here is your ticket</h1> <!-- Placeholder for session title -->
+            </div>
+            <div id="ticketDetailsContainer">
+                <p id="ticketDetails"></p>
+            </div>
+            <div id="downloadButtonContainer">
+                <button id="downloadBtn" onclick="downloadReceipt()">Download Receipt</button>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div class="loading-indicator" id="loadingIndicator" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Include html2canvas and jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
