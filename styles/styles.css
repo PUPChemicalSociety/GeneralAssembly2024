@@ -141,8 +141,8 @@ button:hover {
     font-size: clamp(30px, 4vw, 34px);
     line-height: 1.4;
     color: #000000;
-    text-shadow: 0 0 30px #FDFFB2, 0 0 70px #FDFFB2;
-    -webkit-text-stroke: 0.3px #ffffff;
+    text-shadow: 0 0 15px #fff, 0 0 30px #fff;
+    -webkit-text-stroke: 0.5px #ffffff;
     margin-top: -8vw;
 }
 
@@ -259,10 +259,10 @@ button:hover {
     }
 
     #ticketHeader {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     button {
-        font-size: 1.8vw;
+        font-size: 1.3vw;
     }
 }
