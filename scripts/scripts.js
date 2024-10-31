@@ -53,7 +53,7 @@ function generateTicket() {
     referenceCode = generateReferenceCode();
 
     let sessionTitle = '';
-    let eventDate = 'October 30, 2024'; // GA date
+    let eventDate = 'November 5, 2024'; // GA date
     let eventTime = '';
 
     // Determine session title and time
